@@ -1,17 +1,15 @@
 'use client'
+import { TimelineContext } from '@/app/context/TimelineContext';
+import { useContext } from 'react';
 import { LuVideo } from 'react-icons/lu';
-import { toast } from 'react-toastify';
 
 const HandleVideoCallBtn = ({ friend }) => {
-    const VideoCallBtn = () => {
-        toast.success(`Video Call with ${friend.name}`)
-        
-    }
+    const { VideoCallBtn } = useContext(TimelineContext)
 
     return (
-        <div 
-        className='bg-gray-200 p-4 rounded-lg w-full text-center'
-        onClick={VideoCallBtn}>
+        <div
+            className='bg-gray-200 p-4 rounded-lg w-full text-center'
+            onClick={()=> VideoCallBtn(friend)}>
             <LuVideo className='text-3xl mx-auto font-bold mb-2' />
             <p className='text-lg'>Call</p>
         </div>

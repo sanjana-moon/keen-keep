@@ -1,7 +1,7 @@
 import FriendCard from "../ui/FriendCard";
 
 const AllFriendsCards = async () => {
-    const res = await fetch("http://localhost:3000/data.json", {
+    const res = await fetch("https://keen-keeper-blush.vercel.app//data.json", {
         cache: "no-store",
     });
     const friends = await res.json()

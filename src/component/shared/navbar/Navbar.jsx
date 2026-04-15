@@ -2,15 +2,22 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { MdOutlineMoreTime } from 'react-icons/md';
 import { RiDashboardFill } from 'react-icons/ri';
 
 const Navbar = () => {
     const pathname = usePathname()
 
-    const link = <>
-        <li><Link href="/" className={`pb-2 font-semibold border ${pathname === '/' ?
-            'border-b-2 bg-[#244D3F] text-white' : ''}`}><RiDashboardFill />Dashboard</Link></li>
-    </>
+    const link = <div className='flex gap-3 items-center justify-center'>
+        <li>
+            <Link href="/" className={`pb-2 font-semibold border ${pathname === '/' ?
+                'border-b-2 bg-[#244D3F] text-white' : ''}`}><RiDashboardFill />Dashboard</Link>
+        </li>
+        <li>
+            <Link href="/timeline" className={`pb-2 font-semibold border ${pathname === '/timeline' ?
+                'border-b-2 bg-[#244D3F] text-white' : ''}`}><MdOutlineMoreTime />Timeline</Link>
+        </li>
+    </div>
 
     return (
         <div className="navbar bg-base-100 shadow-sm">
