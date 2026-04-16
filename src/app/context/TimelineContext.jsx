@@ -6,7 +6,7 @@ export const TimelineContext = createContext();
 
 const TimelineContextProvider = ({ children }) => {
     const [communicationList, setCommunicationList] = useState([]);
-    const [filteredSection, setFilteredSection] = useState([]);
+    const [filteredSection, setFilteredSection] = useState(null);
 
     const CallBtn = (friend) => {
         setCommunicationList([...communicationList, {friend, communicationType: "call"}]);

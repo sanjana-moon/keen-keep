@@ -27,7 +27,8 @@ const FriendCard = ({ friend }) => {
                                     ${friend.status === 'overdue' ? 'bg-red-500 text-white' :
                                 friend.status === 'almost due' ? 'bg-yellow-500 text-white' :
                                     friend.status === 'on-track' ? 'bg-green-800 text-white' : ''}`}>
-                        {friend.status}</div>
+                        {friend.status}
+                    </div>
                 </div>
             </div>
         </Link>

@@ -11,7 +11,7 @@ const HandleVideoCallBtn = ({ friend }) => {
             className='bg-gray-200 p-4 rounded-lg w-full text-center'
             onClick={()=> VideoCallBtn(friend)}>
             <LuVideo className='text-3xl mx-auto font-bold mb-2' />
-            <p className='text-lg'>Call</p>
+            <p className='text-lg'>Video Call</p>
         </div>
     );
 };

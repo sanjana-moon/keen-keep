@@ -12,7 +12,7 @@ const Stats = () => {
 
     if (callCount === 0 && textCount === 0 && videoCount ===0) {
         return <div className="container mx-auto min-h-[80vh] flex justify-center items-center">
-            <h2 className="text-5xl text-[#244D3F] font-bold">No Communication Done Yet</h2>
+            <h2 className="text-3xl md:text-5xl text-[#244D3F] font-bold text-center">No Communication Done Yet</h2>
         </div>
     }
 
